@@ -8,15 +8,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><img src="img/logo.png"></a>
+          <a class="navbar-brand" href="index.php"><img src="img/logo.png" class="img-responsive"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">Categoria 1</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grupo Categorias <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -27,11 +26,13 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
+            <li><a href="#about">Categoria 2</a></li>
+            <li><a href="#about">Categoria 3</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://getbootstrap.com/docs/3.3/examples/navbar/">Default</a></li>
-            <li class="active"><a href="https://getbootstrap.com/docs/3.3/examples/navbar-static-top/">Static top <span class="sr-only">(current)</span></a></li>
-            <li><a href="https://getbootstrap.com/docs/3.3/examples/navbar-fixed-top/">Fixed top</a></li>
+            <!--<li class="active"><a href="https://getbootstrap.com/docs/3.3/examples/navbar-static-top/">Static top <span class="sr-only">(current)</span></a></li>
+            <li><a href="https://getbootstrap.com/docs/3.3/examples/navbar-fixed-top/">Fixed top</a></li>-->
+            <li class="active"><a href=""><i class="fas fa-search"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
