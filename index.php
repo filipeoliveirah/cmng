@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>CMNG</title>
-        <? include_once('incs/head.php'); ?>
-        <? include_once('functions.php'); ?>
-    </head>
+<?php
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
 
-  <body>
-    <? include_once("incs/menu.php"); ?>
-    <? include_once("incs/slider.php"); ?>
-    <? include_once("incs/content-blog.php"); ?>
-    <? include_once("incs/footer.php"); ?>
-  </body>
-</html>
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define('WP_USE_THEMES', true);
+
+/** Loads the WordPress Environment and Template */
+require( dirname( __FILE__ ) . '/wp-blog-header.php' );
