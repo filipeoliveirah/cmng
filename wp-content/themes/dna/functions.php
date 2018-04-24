@@ -45,4 +45,48 @@
     }
     add_action( 'widgets_init', 'dna_widgets_init' );
 
+    function pesquisar_widgets_init() {
+        register_sidebar( array(
+            'name'          => __( 'pesquisar', 'dna' ),
+            'id'            => 'pesquisar',
+            'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<p class="blog-widget-subtitle">',
+            'after_title'   => '</p>',
+        ) );
+    }
+    add_action( 'widgets_init', 'pesquisar_widgets_init' );
+    // Adicona área de widgets
+
+    function wordpress_pagination() {
+		global $wp_query;
+
+		$big = 999999999;
+
+		echo paginate_links( array(
+			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format' => '?paged=%#%',
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $wp_query->max_num_pages
+		) );
+    }
+    
+    function my_post_queries( $query ) {
+        // do not alter the query on wp-admin pages and only alter it if it's the main query
+        if (!is_admin() && $query->is_main_query()){
+      
+          // alter the query for the home and category pages 
+      
+          if(is_home()){
+            $query->set('posts_per_page', 3);
+          }
+      
+          if(is_category()){
+            $query->set('posts_per_page', 3);
+          }
+      
+        }
+      }
+      add_action( 'pre_get_posts', 'my_post_queries' );
 ?>

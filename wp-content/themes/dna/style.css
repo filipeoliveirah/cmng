@@ -12,8 +12,8 @@ body {
 	background: #f6f6f6;
   }
   a{color:#23bb68}
-  p{font-size: 19px; color: #757575}
-  
+  p{font-size: 17px; color: #757575; margin: 15px 0}
+  h1, h2, h3{margin-top: 10px}
   .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header{
 	min-height: 90px;
   }
@@ -40,25 +40,27 @@ body {
   /*BLOG*/
   .blog-content{margin: 40px 180px}
   .blog-card{margin-bottom: 40px; background: white; box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px 0 rgba(0, 0, 0, 0.1)}
+  
   .blog-card h2{text-align: center}
-  .blog-card-text{padding: 10px 20px; text-align: left}
+  .blog-card-text{padding: 10px; text-align: left}
   .blog-card-text h1, h2, h3, h4{text-align: center}
   .blog-card-thumb{position: relative;
     width: 100%;
-    height: 200px;
-    overflow: hidden;}
+    height: 180px;
+    overflow: hidden;
+    margin: 20px 0;}
 
   .blog-card-thumb img{
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
     -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
   }
-  .blog-tag-categoria{margin: 30px auto 20px auto; display: table}
+  .blog-tag-categoria{margin: 0px auto 0px auto; display: table}
   .blog-tag-categoria span{text-transform: uppercase; margin: 0 2px; padding:5px; color: #23bb68; border: 1px solid #23bb68; border-radius: 3px}
   
   .blog-card-footer{background: #f6f6f6; min-height: 50px; padding: 10px}
@@ -81,9 +83,9 @@ body {
   /*SIDEBAR*/
   .blog-widget-buscar{width: 100%}
   .blog-widget-subtitle{color: #909090; text-align: center}
-  .blog-widget-buscar input{width:80%; border: 0; float: left; background: #f1f1f1; padding: 7px; color: #919191;}
+  .blog-widget-buscar input{width:100%; border: 0; float: left; background: #f1f1f1; padding: 7px; color: #919191;}
   .blog-widget-buscar button{width:20%; border: 0;float: left; background: #23bb68; color: white; padding: 10px}
-  .blog-widget{background: white; padding: 20px; margin-bottom:20px; box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px 0 rgba(0, 0, 0, 0.1)}
+  .blog-widget{background: white; padding: 20px; margin:20px 0; box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px 0 rgba(0, 0, 0, 0.1)}
   .blog-widget-title{float: left;
 	border: 1px solid #b2b2b2;
 	padding: 10px;
@@ -93,15 +95,16 @@ body {
 	color: #b2b2b2;
 	text-transform: uppercase;
 	box-shadow: 0px 0px 0px 10px rgb(255, 255, 255);
-  
-	max-width: 200px;
 	position:absolute;
 	left:0;
 	right:0;
 	margin-left:auto;
 	margin-right:auto;
   }
-  .blog-widget-content{margin: 20px auto; display: inline-block; width: 100%; }
+  .blog-widget-title-full{height: 300px;}
+  .blog-widget-title-thumb{height: 200px}
+  .blog-widget-content{margin: 10px auto; display: inline-block; width: 100%; }
+  .blog-widget-content-quebra{margin-bottom: 50px;}
   .blog-widget-noticias i, .blog-widget-noticias span{color: #b2b2b2; margin-bottom: 20px}
   hr{
 	border-top: 1px solid #b2b2b2;

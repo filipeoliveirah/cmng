@@ -9,7 +9,9 @@
             setup_postdata( $post );
         ?> 
         <div class="blog-card">
-            <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+            <div class="blog-card-thumb blog-widget-title-full">
+                <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+            </div>
             <div class="blog-tag-categoria"><span><?php the_category( ', ' ); ?></span></div>
             <div class="blog-card-text">
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

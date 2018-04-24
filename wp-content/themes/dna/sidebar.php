@@ -5,10 +5,11 @@
 		<hr>
 		<div class="blog-widget-content">
 			<div class="blog-widget-buscar">
-				<form method="post">    
+			<?php if ( dynamic_sidebar('pesquisar') ) : else : endif; ?>
+				<!--<form method="post">    
 					<input type="text" name="" placeholder="Digite a palavra desejada"/>
 					<button type="submit" class="fas fa-search"></button>        
-				</form>
+				</form>-->
 			</div>
 		</div>
 	</div>
@@ -40,7 +41,7 @@
 			</div>               
 		</div>
 	</div>
-	<div class="blog-widget">    
+	<!--<div class="blog-widget">    
 		<div class="col-md-6 blog-widget-title">Newsletter</div>
 		<hr>
 		<div class="blog-widget-content">                         
@@ -53,6 +54,6 @@
 				</form>             
 			</div>                
 		</div>
-	</div>
+	</div>-->
 	<!--BODY SIDEBAR-->
 </div>

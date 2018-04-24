@@ -26,13 +26,13 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
-            <li><a href="#about">Categoria 2</a></li>
             <li><a href="#about">Categoria 3</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!--<li class="active"><a href="https://getbootstrap.com/docs/3.3/examples/navbar-static-top/">Static top <span class="sr-only">(current)</span></a></li>
             <li><a href="https://getbootstrap.com/docs/3.3/examples/navbar-fixed-top/">Fixed top</a></li>-->
-            <li class="active"><a href=""><i class="fas fa-search"></i></a></li>
+            
+            <!--<li class="active"><a href=""><i class="fas fa-search"></i></a></li>-->
           </ul>
         </div><!--/.nav-collapse -->
       </div>

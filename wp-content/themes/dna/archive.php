@@ -18,17 +18,20 @@
 		<div class="blog-content">
 			<div class="col-md-9">				
 				<div class="blog-widget">   
-					<? if ( have_posts() ) : ?>
-					<div class="col-md-6 blog-widget-title">Categoria: <? the_category(', ');?></div>
+					
+					<div class="col-md-6 blog-widget-title">Categoria: <? if ( have_posts() ) : the_category(', ');?></div>
 					<hr>
-					<div class="blog-widget-content">
-						<?php
-							$i = 0;						
-							while ( have_posts() && $i < 6 ) : the_post();?>
+					<div class="blog-widget-content">	
+						<?php 						
+						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+						$args = array('posts_per_page' => 4, 'paged' => $paged );
+						query_posts($args);
+						?>
+						<!-- the loop -->
+						<?php  while (have_posts()) : the_post(); ?>
 							<div class="col-md-6 col-xs-12">
-								<div class="blog-card">
-									
-									<div class="blog-card-thumb"><?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?></div>
+								<div class="blog-card">								
+									<div class="blog-card-thumb blog-widget-title-thumb"><?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?></div>
 									<div class="blog-tag-categoria"><span><?php the_category( ', ' ); ?></span></div>
 									<div class="blog-card-text">
 										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -39,11 +42,18 @@
 										<div class="col-md-6"><div class="blog-card-leia-mais" style="padding-right: 25px"><a href="<?php the_permalink(); ?>">LEIA MAIS</a><i class="fas fa-angle-right"></i></div></div>
 									</div>          
 								</div>
-							</div><?php 
-							$i ++;
-							endwhile;
-							else: echo "Categoria sem posts";
-						endif;?>
+							</div>
+						<?php endwhile; ?>
+						<!-- pagination -->
+						<div class="col-md-12">
+							<?php
+								next_posts_link();
+								previous_posts_link();
+								else :						
+								endif;
+							?>
+						</div>					
+
 					</div>
 				</div>
 			</div>
