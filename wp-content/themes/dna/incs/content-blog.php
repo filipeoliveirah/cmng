@@ -27,6 +27,8 @@
             endforeach; 
             wp_reset_postdata();
         ?> 
+
+        <!--
         <div class="blog-paginacao">
             <a href="javascript:;" class="recentes">
                 <i class="fas fa-angle-double-left"></i> POSTS RECENTES
@@ -35,7 +37,6 @@
             <a href="javascript:;" class="antigos">ANTIGOS
                 <i class="fas fa-angle-double-right"></i>
             </a>
-        </div>
-        <!--BODY NEW-->
+        </div>-->
     </div>
 </div>

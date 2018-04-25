@@ -87,6 +87,24 @@
           }
       
         }
-      }
-      add_action( 'pre_get_posts', 'my_post_queries' );
+    }
+    add_action( 'pre_get_posts', 'my_post_queries' );
+
+    // Register Custom Navigation Walker
+    require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
+    if ( ! file_exists( get_template_directory() . '/wp-bootstrap-navwalker.php' ) ) {
+        // file does not exist... return an error.
+        return new WP_Error( 'wp-bootstrap-navwalker-missing', __( 'It appears the wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+    } else {
+        // file exists... require it.
+        require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
+    }
+    // Register Custom Navigation Walker
+
+    // Registra uma área para adição do menu
+    register_nav_menus( array(
+        'primary' => __( 'Principal', 'dna' ),
+    ) );
+
+      
 ?>
