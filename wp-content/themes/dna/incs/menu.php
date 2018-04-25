@@ -36,4 +36,5 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
+      <?php wp_nav_menu( $args ); ?>
     </nav>

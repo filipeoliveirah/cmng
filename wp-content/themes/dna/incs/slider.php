@@ -1,32 +1,36 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
+  <!-- Indicators-->
+  <div class="visible-lg">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+  </div>
 
   <!-- Wrapper for slides -->
+  
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="http://via.placeholder.com/1600X450" alt="...">
+    <? 
+      $inc = 1;
+      $wp_query = new WP_Query();
+      $args = array( 
+        'category_name' => 'destaque',
+        'posts_per_page'=> 3
+      );
+      $wp_query->query($args);
+      while ($wp_query->have_posts()) : $wp_query->the_post();
+    ?>
+    <div class="item <? if($inc == 1): echo 'active'; endif; ?>">
+      <?php the_post_thumbnail('full'); ?>
       <div class="carousel-caption">
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <button>Agende uma consulta</button>
+      <h2><?php the_title(); ?></h2>
       </div>
     </div>
-    <div class="item">
-      <img src="http://via.placeholder.com/1600X450" alt="...">
-      <div class="carousel-caption">
-        Lorem ipsum dolor sit amet
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://via.placeholder.com/1600X450" alt="...">
-      <div class="carousel-caption">
-        Lorem ipsum dolor sit amet
-      </div>
-    </div>
+    <?
+    $inc++;
+    endwhile;
+    ?> 
   </div>
 
   <!-- Controls -->

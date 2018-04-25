@@ -32,25 +32,31 @@ body {
   /*NAVBAR*/
   
   /*CAROUSEL*/
-  .carousel-caption{bottom: 120px; font-size: 45px}
+  .carousel-caption{top: 120px; font-size: 45px}
   .carousel-caption h2{font-size: 45px;}
   .carousel-caption button{background: #23bb68; color: white; padding: 10px; border: 0; border-radius: 4px; font-size: 16px; text-transform: uppercase; box-shadow: 0px 3px 1px 0 rgba(0, 0, 0, 0.4)}
+  .carousel-inner img{-webkit-filter: brightness(50%); /* Safari 6.0 - 9.0 */
+    filter: brightness(50%);
+  }
   /*CAROUSEL*/
-  
+
   /*BLOG*/
   .blog-content{margin: 40px 180px}
   .blog-card{margin-bottom: 40px; background: white; box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px 0 rgba(0, 0, 0, 0.1)}
   
   .blog-card h2{text-align: center}
-  .blog-card-text{padding: 10px; text-align: left}
+  .blog-card-text{padding: 20px; text-align: left}
   .blog-card-text h1, h2, h3, h4{text-align: center}
-  .blog-card-thumb{position: relative;
+  .blog-card-thumb, .carousel-inner{position: relative;
     width: 100%;
     height: 180px;
     overflow: hidden;
-    margin: 20px 0;}
+    margin-bottom: 20px;
+  }
+  .carousel-inner{height: 400px;}
+  .carousel-inner > .item{height: 380px;}
 
-  .blog-card-thumb img{
+  .blog-card-thumb img, .carousel-inner > .item > a > img, .carousel-inner > .item > img{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -63,7 +69,7 @@ body {
   .blog-tag-categoria{margin: 0px auto 0px auto; display: table}
   .blog-tag-categoria span{text-transform: uppercase; margin: 0 2px; padding:5px; color: #23bb68; border: 1px solid #23bb68; border-radius: 3px}
   
-  .blog-card-footer{background: #f6f6f6; min-height: 50px; padding: 10px}
+  .blog-card-footer{background: #f6f6f6; min-height: 70px; padding: 20px}
   .blog-card-data, .blog-card-leia-mais{color: #909090; padding: 5px; border-radius: 3px; text-align: center; border: 1px solid #919191; margin-bottom: 10px}
   .blog-card-leia-mais{background: white;}
   .blog-card-leia-mais a{text-decoration: none; color: #919191}
@@ -78,8 +84,7 @@ body {
   .blog-paginacao .antigos{color: #23bb68;}
   .blog-paginacao .recentes{color: black;}
   /*BLOG*/
-  
-  
+
   /*SIDEBAR*/
   .blog-widget-buscar{width: 100%}
   .blog-widget-subtitle{color: #909090; text-align: center}
@@ -99,7 +104,8 @@ body {
 	left:0;
 	right:0;
 	margin-left:auto;
-	margin-right:auto;
+  margin-right:auto;
+  max-width: 220px;
   }
   .blog-widget-title-full{height: 300px;}
   .blog-widget-title-thumb{height: 200px}
@@ -118,9 +124,9 @@ body {
   .blog-widget-newsletter input{width: 100%; margin: 5px 0; padding: 10px; border: 0; background: #f1f1f1}
   .blog-widget-newsletter input:not([type]), input[type="submit"]{background: #23bb68; border: none; color: white; text-transform: uppercase}
   /*SIDEBAR*/
-  
-  /*FOOTER*/
-  
+
+
+  /*FOOTER*/  
   footer{width: 100%;  background: white; bottom: 0; margin-top:50px; display: inline-block}
   footer .footer-atendimento{padding: 20px 0;}
   footer .footer-atendimento span {font-size: 22px}
@@ -138,6 +144,10 @@ body {
 	.blog-content{margin: 40px 0px}
 	footer .footer-divisoria{border-right:0 ;}
 	.navbar-default .navbar-nav > li > a{border: 0}
-	.blog-card-leia-mais i{right: 14px;}
+  .blog-card-leia-mais i{right: 14px;}
+  .carousel-caption h2{font-size: 20px}
+  .carousel-caption{top: 0px}
+  .carousel-inner > .item{height: 120px;}
+  .blog-card-thumb, .carousel-inner{height: 140px;}
 	.carousel-inner > .item > a > img, .carousel-inner > .item > img {max-width: inherit}
   }
