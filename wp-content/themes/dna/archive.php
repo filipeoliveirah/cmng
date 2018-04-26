@@ -19,21 +19,22 @@
 			<div class="col-md-9">				
 				<div class="blog-widget">   
 					
-					<div class="col-md-6 blog-widget-title">Categoria: <? if ( have_posts() ) : the_category(', ');?></div>
+					<div class="col-md-6 blog-widget-title">Posts da Categoria</div>
 					<hr>
 					<div class="blog-widget-content">	
-						<?php 						
+						<?php
+										
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-						$args = array('posts_per_page' => 4, 'paged' => $paged );
+						$args = array('posts_per_page' => 2, 'paged' => $paged );
 						query_posts($args);
 						?>
 						<!-- the loop -->
-						<?php  while (have_posts()) : the_post(); ?>
+						<?php while (have_posts()) : the_post(); ?>
 							<div class="col-md-6 col-xs-12">
 								<div class="blog-card">								
 									<div class="blog-card-thumb blog-widget-title-thumb"><?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?></div>
 									<div class="blog-tag-categoria"><span><?php the_category( ', ' ); ?></span></div>
-									<div class="blog-card-text">
+									<div class="blog-card-text" style="min-height: 380px">
 										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 										<p><?php the_excerpt(); ?></p>
 									</div> 
@@ -46,20 +47,24 @@
 						<?php endwhile; ?>
 						<!-- pagination -->
 						<div class="col-md-12">
-							<?php
-								next_posts_link();
-								previous_posts_link();
-								else :						
-								endif;
-							?>
+							<div class="col-md-6">
+								<?php								
+									previous_posts_link();							
+								?>
+							</div>
+							<div class="col-md-6">
+								<div class="pull-right">
+								<?php
+									next_posts_link();
+								?>
+								</div>
+							</div>
 						</div>					
 
 					</div>
 				</div>
 			</div>
-			
-			<?php include_once("sidebar.php");?>
-			
+			<?php include_once("sidebar.php");?>			
 		</div>
 
 	<?php	

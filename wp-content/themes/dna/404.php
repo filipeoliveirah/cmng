@@ -1,19 +1,33 @@
-<?php get_header(); ?>
-	<div id="conteudo">
-		<div id="artigos">
-			<div class="artigo">
-				<h2>Titulo do artigo 1</h2>
-				<p>Postado por administrador em 16/01/2012</p>
-				<p>Conteudo do artigo</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>	
+		<? get_header();?>
+    </head>
+
+  <body>
+  
+	<?
+	/*include_once("incs/menu.php");
+    include_once("incs/slider.php");
+	include_once("incs/content-blog.php");*/
+	?>
+	<?php	
+	include_once("incs/menu.php");
+	//include_once("incs/slider-blog.php");?>
+
+		<div class="blog-content">
+			<div class="col-md-9">				
+				<div class="blog-widget">  
+					<div class="blog-widget-content">	
+						<h2>Página não encontrada</h2>
+					</div>
+				</div>
 			</div>
-			
-			<div class="artigo">
-				<h2>Titulo do artigo 2</h2>
-				<p>Postado por administrador em 16/01/2012</p>
-				<p>Conteudo do artigo</p>
-			</div>
+			<?php include_once("sidebar.php");?>			
 		</div>
-		
-		<?php get_sidebar(); ?>
-	</div>
-<?php get_footer(); ?>
+
+	<?php	
+		include_once("footer.php");
+	?>
+  </body>
+</html>

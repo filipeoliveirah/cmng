@@ -1,5 +1,5 @@
 <div class="blog-content">
-    <div class="col-md-8">
+    <div class="col-md-9">
         <!--BODY NEW-->
         <div class="blog-card">            
             <div class="blog-card-text">
@@ -78,7 +78,5 @@
         </div>
 
     </div>
-    <div class="col-md-4">
-        <?php include_once("sidebar.php");?>
-    </div>
+    <?php include_once("sidebar.php");?>
 </div>

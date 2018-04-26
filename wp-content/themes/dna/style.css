@@ -12,7 +12,7 @@ body {
 	background: #f6f6f6;
   }
   a{color:#23bb68}
-  p{font-size: 17px; color: #757575; margin: 15px 0}
+  p{font-size: 17px; color: #757575; margin: 5px 0}
   h1, h2, h3{margin-top: 10px}
   .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header{
 	min-height: 90px;
@@ -22,13 +22,13 @@ body {
   
   /*NAVBAR*/
   .navbar-static-top {margin-bottom: 0;}
-  .navbar-nav{margin: 0 15px; text-transform: uppercase; font-weight: 700}
+  .navbar-nav{margin-top: 5px; text-transform: uppercase; font-weight: 700}
   .navbar-nav > li > a{padding-top: 0; padding-bottom: 0}
   .navbar-default .navbar-nav > li > a{border-left: 1px solid #b2b2b2}
   .navbar-brand{padding: 15px 5px 0 15px}
-  .navbar-brand > img{max-width: 230px;}
-  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{background: #f8f8f8; color: #23bb68; margin-bottom: 30px }
-  .navbar-nav > li > a{margin-top: 33px; margin-bottom: 5px}
+  .navbar-brand > img{max-width: 210px;}
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{background: #f8f8f8; color: #23bb68; margin-bottom: 20px }
+  .navbar-nav > li > a{margin-top: 20px; margin-bottom: 5px}
   /*NAVBAR*/
   
   /*CAROUSEL*/
@@ -41,11 +41,11 @@ body {
   /*CAROUSEL*/
 
   /*BLOG*/
-  .blog-content{margin: 40px 180px}
+  .blog-content{margin: 40px 120px}
   .blog-card{margin-bottom: 40px; background: white; box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px 0 rgba(0, 0, 0, 0.1)}
   
   .blog-card h2{text-align: center}
-  .blog-card-text{padding: 20px; text-align: left}
+  .blog-card-text{padding: 20px; text-align: left;}
   .blog-card-text h1, h2, h3, h4{text-align: center}
   .blog-card-thumb, .carousel-inner{position: relative;
     width: 100%;
@@ -105,11 +105,11 @@ body {
 	right:0;
 	margin-left:auto;
   margin-right:auto;
-  max-width: 220px;
+  max-width: 240px;
   }
   .blog-widget-title-full{height: 300px;}
   .blog-widget-title-thumb{height: 200px}
-  .blog-widget-content{margin: 10px auto; display: inline-block; width: 100%; }
+  .blog-widget-content{margin: 20px auto; display: inline-block; width: 100%; }
   .blog-widget-content-quebra{margin-bottom: 50px;}
   .blog-widget-noticias i, .blog-widget-noticias span{color: #b2b2b2; margin-bottom: 20px}
   hr{
@@ -135,8 +135,8 @@ body {
   footer .footer-go-top a{text-decoration: none; font:black}
   footer .footer-line{background: #23bb68; padding: 10px; text-align: center; color: white; width: 100%; display: inline-block;}
   footer p{text-transform: uppercase; color: #919191}
-  footer span{background: #23bb68; color: white; padding: 10px}
-  footer .footer-divisoria{border-right: 1px solid #b2b2b2; margin-bottom: 30px}
+  footer span{background: #23bb68; color: white; padding: 10px; margin: 5px 0; display: block}
+  footer .footer-divisoria{border-right: 1px solid #b2b2b2; margin-bottom: 30px; height: 90px}
   .footer-call-to-action{margin: 0 auto; display: table}
   /*FOOTER*/
   

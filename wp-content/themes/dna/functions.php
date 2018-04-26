@@ -13,6 +13,7 @@
     }
 
     // FUNÇÃO QUE MOSTRA IMAGEM EM DESTAQUE NA LISTAGEM DO BLOG
+    /*
     function your_columns_head($defaults) { 
         $new = array();
         $tags = $defaults['my_post_thumbs']; // Salva a coluna Imagem
@@ -26,7 +27,7 @@
         }         
         return $new;
     }
-    add_filter('manage_posts_columns', 'your_columns_head');   
+    add_filter('manage_posts_columns', 'your_columns_head');   */
 
     //Adiciona imagem destacada a pagina de blogpost e pagetype
     add_theme_support( 'post-thumbnails' );
@@ -83,7 +84,7 @@
           }
       
           if(is_category()){
-            $query->set('posts_per_page', 3);
+            $query->set('posts_per_page', 2);
           }
       
         }
