@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>	
-		<? get_header();?>
+		<?php get_header();?>
     </head>
 
   <body>
   
-	<?
+	<?php
 	/*include_once("incs/menu.php");
     include_once("incs/slider.php");
 	include_once("incs/content-blog.php");*/

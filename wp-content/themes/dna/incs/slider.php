@@ -1,9 +1,9 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators-->
-  <? $wp_query = new WP_Query(); ?>
+  <?php $wp_query = new WP_Query(); ?>
   <div class="visible-lg">
     <ol class="carousel-indicators">
-      <?
+      <?php
         $inc_slide = 0;
         $args = array( 
           'category_name' => 'destaque',
@@ -12,8 +12,8 @@
         $wp_query->query($args);
         while ($wp_query->have_posts()) : $wp_query->the_post();
       ?>  
-      <li data-target="#carousel-example-generic" data-slide-to="<? echo $inc_slide; ?>" class="<? if($inc_slide == 0): echo 'active';  endif;?>"></li>
-      <?
+      <li data-target="#carousel-example-generic" data-slide-to="<?php echo $inc_slide; ?>" class="<?php if($inc_slide == 0): echo 'active';  endif;?>"></li>
+      <?php
         $inc_slide++;
         endwhile;
       ?>
@@ -23,7 +23,7 @@
   <!-- Wrapper for slides -->
   
   <div class="carousel-inner" role="listbox">
-    <? 
+    <?php 
       $inc = 0;
       $wp_query = new WP_Query();
       $args = array( 
@@ -33,13 +33,13 @@
       $wp_query->query($args);
       while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
-    <div class="item <? if($inc == 0): echo 'active'; endif; ?>">
+    <div class="item <?php if($inc == 0): echo 'active'; endif; ?>">
       <?php the_post_thumbnail('full'); ?>
       <div class="carousel-caption">
       <h2><?php the_title(); ?></h2>
       </div>
     </div>
-    <?
+    <?php
     $inc++;
     endwhile;
     ?> 

@@ -6,7 +6,7 @@
 <div class="blog-content">
 	<div class="col-md-9">				
 		<div class="blog-widget">   
-			<? if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 			<div class="col-md-6 blog-widget-title">Categoria: <? the_category(', ');?></div>
 			<hr>
 			<div class="blog-widget-content">

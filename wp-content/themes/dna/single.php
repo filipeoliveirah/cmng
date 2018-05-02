@@ -6,7 +6,7 @@
 
   <body>
   
-	<?
+	<?php
 	/*include_once("incs/menu.php");
     include_once("incs/slider.php");
 	include_once("incs/content-blog.php");*/

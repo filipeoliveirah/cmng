@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>	
-		<? get_header();?>
+		<?php get_header();?>
     </head>
 
   <body>
   
-	<?
+	<?php
 	/*include_once("incs/menu.php");
     include_once("incs/slider.php");
 	include_once("incs/content-blog.php");*/
@@ -19,7 +19,7 @@
 			<div class="col-md-9">				
 				<div class="blog-widget">   
 					
-					<div class="col-md-6 blog-widget-title">Categoria: <? if ( have_posts() ) : the_category(', ');?></div>
+					<div class="col-md-6 blog-widget-title">Categoria: <?php if ( have_posts() ) : the_category(', ');?></div>
 					<hr>
 					<div class="blog-widget-content">	
 						<?php 						

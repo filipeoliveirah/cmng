@@ -6,13 +6,13 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <? while(have_posts()) : the_post(); ?>
+    <?php while(have_posts()) : the_post(); ?>
     <div class="item active">
       <?php the_post_thumbnail('full'); ?>
       <div class="carousel-caption">
         <h2><?php the_title(); ?></h2>
       </div>
     </div>
-    <? endwhile; ?>    
+    <?php endwhile; ?>    
   </div>
 </div>
