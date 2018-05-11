@@ -28,7 +28,7 @@
       $wp_query = new WP_Query();
       $args = array( 
         'category_name' => 'destaque',
-        //'posts_per_page'=> 3
+        'posts_per_page'=> 3
       );
       $wp_query->query($args);
       while ($wp_query->have_posts()) : $wp_query->the_post();
