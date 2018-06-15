@@ -16,7 +16,7 @@
 	include_once("incs/slider.php");
 	include_once("incs/content-blog.php");
 	get_sidebar();
-	include_once("footer.php");
+	get_footer();
 	?>
   </body>
 </html>

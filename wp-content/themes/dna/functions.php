@@ -58,6 +58,19 @@
         ) );
     }
     add_action( 'widgets_init', 'pesquisar_widgets_init' );
+
+    function banner_widgets_init() {
+        register_sidebar( array(
+            'name'          => __( 'Banner', 'dna' ),
+            'id'            => 'banner',
+            'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<p class="blog-widget-subtitle">',
+            'after_title'   => '</p>',
+        ) );
+    }
+    add_action( 'widgets_init', 'banner_widgets_init' );
     // Adicona área de widgets
 
     function wordpress_pagination() {

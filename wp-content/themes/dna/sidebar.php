@@ -13,9 +13,15 @@
 			</div>
 		</div>
 	</div>
+	
 	<div class="blog-widget">
 		<div class="blog-widget-content">
 			<?php if ( dynamic_sidebar('sidebar-1') ) : else : endif; ?>
+		</div>
+	</div>
+	<div class="blog-widget">
+		<div class="blog-widget-content">
+			<?php if ( dynamic_sidebar('banner') ) : else : endif; ?>
 		</div>
 	</div>
 	<div class="blog-widget">    
@@ -39,6 +45,7 @@
 			</div>               
 		</div>
 	</div>
+
 	<!--<div class="blog-widget">    
 		<div class="col-md-6 blog-widget-title">Newsletter</div>
 		<hr>
