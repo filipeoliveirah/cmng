@@ -17,7 +17,8 @@ body {
   .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header{
 	min-height: 90px;
   }
-  
+
+  h1{font-size: 40px; font-weight: 900}  
   h2{font-size: 25px}
   
   /*NAVBAR*/
@@ -38,6 +39,7 @@ body {
   .carousel-inner img{-webkit-filter: brightness(50%); /* Safari 6.0 - 9.0 */
     filter: brightness(50%);
   }
+  .carousel-inner a{color: white}
   /*CAROUSEL*/
 
   /*BLOG*/

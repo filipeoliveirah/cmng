@@ -3,7 +3,7 @@
         <!--BODY NEW-->
         <div class="blog-card">            
             <div class="blog-card-text">
-                <div class="blog-tag-categoria"><span><?php the_category( ', ' ); ?></span></div>        
+                <!--<div class="blog-tag-categoria"><span><?php the_category( ', ' ); ?></span></div> -->       
                 <!-- Start the Loop. -->
                 <?php if ( have_posts() ) :
                     
@@ -33,7 +33,7 @@
             </div> 
             <div class="blog-card-footer">
                 <div class="col-md-3"><div class="blog-card-data"><?php the_time('d/m/Y'); ?></div></div>
-                <div class="col-md-6"><div class="blog-card-social"><i class="fab fa-facebook-f"> /cmng</i><i class="fab fa-instagram"> @cmng</i></div></div>
+                <div class="col-md-6"><div class="blog-card-social"><i class="fab fa-facebook-f"> <a href="https://www.facebook.com/cmnguanabara/" target="_blank"> /cmnguanabara </a></i><i class="fab fa-instagram"> <a href="https://www.instagram.com/cmnguanabara/" target="_blank"> @cmnguanabara </a> </i></div></div>
                 
             </div>          
         </div>
